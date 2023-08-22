@@ -16,19 +16,21 @@ import java.util.List;
 <span class="nc" id="L16">public class TrueReturnsMutator extends MutationOperator {</span>
     @Override
     public boolean isToBeProcessed(CtElement candidate) {
-        // COMPLETAR
-<span class="nc" id="L20">        return false;</span>
+<span class="nc bnc" id="L19" title="All 4 branches missed.">        return (candidate instanceof CtReturn) &amp;&amp; ((CtReturn) candidate).getReturnedExpression().getType().toString().equals(&quot;boolean&quot;);</span>
     }
 
     @Override
     public void process(CtElement candidate) {
-        // COMPLETAR
+<span class="nc" id="L24">        CtReturn op = (CtReturn) candidate;</span>
+<span class="nc" id="L25">        op.setReturnedExpression(candidate.getFactory().Code().createLiteral(true));</span>
 <span class="nc" id="L26">    }</span>
 
     @Override
     public String describeMutation(CtElement candidate) {
-        // COMPLETAR
-<span class="nc" id="L31">        return null;</span>
+<span class="nc" id="L30">        CtReturn op = (CtReturn) candidate;</span>
+<span class="nc" id="L31">        return this.getClass().getSimpleName() + &quot;: Se reemplazÃ³ &quot; +</span>
+<span class="nc" id="L32">                op.getReturnedExpression().toString() + &quot; por true&quot; +</span>
+<span class="nc" id="L33">                &quot; en la lÃ­nea &quot; + op.getPosition().getLine() + &quot;.&quot;;</span>
     }
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.7.202105040129</span></div></body></html>
