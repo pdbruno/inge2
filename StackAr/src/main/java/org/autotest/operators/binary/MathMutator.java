@@ -8,6 +8,7 @@ import spoon.reflect.declaration.CtElement;
 
 import java.util.Arrays;
 import java.util.List;
+import java.util.Objects;
 
 /**
  * Operador de mutación basado en https://pitest.org/quickstart/mutators/#MATH
@@ -21,11 +22,12 @@ public class MathMutator extends MutationOperator {
             return false;
         }
 
-        if (op.getLeftHandOperand().getType().toString() != "int" || op.getLeftHandOperand().getType().toString() != "float" ||
-                op.getRightHandOperand().getType().toString() != "int" || op.getRightHandOperand().getType().toString() != "float") {
+        if (!Objects.equals(op.getLeftHandOperand().getType().toString(), "int") && !Objects.equals(op.getLeftHandOperand().getType().toString(), "float") &&
+                !Objects.equals(op.getRightHandOperand().getType().toString(), "int") && !Objects.equals(op.getRightHandOperand().getType().toString(), "float")) {
             return false;
         }
-        List<BinaryOperatorKind> targetOperations = Arrays.asList(BinaryOperatorKind.PLUS, // +
+        List<BinaryOperatorKind> targetOperations = Arrays.asList(
+                BinaryOperatorKind.PLUS, // +
                 BinaryOperatorKind.MINUS, // -
                 BinaryOperatorKind.MUL, // *
                 BinaryOperatorKind.DIV, // /
