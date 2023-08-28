@@ -11,12 +11,12 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Clase base para todos los operadores de mutaciÃ³n.
+ * Clase base para todos los operadores de mutación.
  */
 <span class="nc" id="L16">public abstract class MutationOperator  extends AbstractProcessor&lt;CtElement&gt; {</span>
 
     /**
-     * Produce un String que describe la mutaciÃ³n realizada por este operador para un nodo del AST.
+     * Produce un String que describe la mutación realizada por este operador para un nodo del AST.
      * @param candidate Nodo del AST.
      */
     public abstract String describeMutation(CtElement candidate);
@@ -57,13 +57,13 @@ import java.util.List;
         // Reemplazamos temporariamente el elemento original por el mutado.
 <span class="nc" id="L58">        astElement.replace(clonedAstElement);</span>
 
-        // Creamos una nueva clase de Spoon que contiene el cÃ³digo mutado.
+        // Creamos una nueva clase de Spoon que contiene el código mutado.
 <span class="nc" id="L61">        CtClass mutatedSpoonClass = spoonLauncher.getFactory().Core().clone(clonedAstElement.getParent(CtClass.class));</span>
 
         // Le asignamos a la nueva clase el mismo paquete que la clase original.
 <span class="nc" id="L64">        mutatedSpoonClass.setParent(originalSpoonClass.getParent());</span>
 
-        // Agregamos un comentario JavaDoc con la descripciÃ³n del mutante.
+        // Agregamos un comentario JavaDoc con la descripción del mutante.
 <span class="nc" id="L67">        String mutantDescription = describeMutation(astElement);</span>
 <span class="nc" id="L68">        mutatedSpoonClass.addComment(spoonLauncher.getFactory().Code().createComment(mutantDescription,</span>
                         CtComment.CommentType.JAVADOC));

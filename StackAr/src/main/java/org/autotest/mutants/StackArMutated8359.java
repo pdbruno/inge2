@@ -1,7 +1,7 @@
 package org.autotest.mutants;
 
 /**
- * TrueConditionalsMutator: Se reemplazó getClass() != obj.getClass() por true en la línea 76.
+ * FalseReturnsMutator: Se reemplazó size() == 0 por false en la línea 29.
  */
 public class StackArMutated8359 extends org.autotest.Stack {
     private static final int DEFAULT_CAPACITY = 10;
@@ -26,7 +26,7 @@ public class StackArMutated8359 extends org.autotest.Stack {
     }
 
     public boolean isEmpty() {
-        return size() == 0;
+        return false;
     }
 
     public boolean isFull() {
@@ -75,7 +75,7 @@ public class StackArMutated8359 extends org.autotest.Stack {
         if (obj == null) {
             return false;
         }
-        if (true) {
+        if (getClass() != obj.getClass()) {
             return false;
         }
         org.autotest.mutants.StackArMutated8359 other = ((org.autotest.mutants.StackArMutated8359) (obj));

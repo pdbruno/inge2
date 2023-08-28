@@ -26,7 +26,7 @@ public class Mutant {
     private final CtClass mutatedSpoonClass;
 
     /**
-     * Una descripciÃ³n del mutante generado.
+     * Una descripción del mutante generado.
      */
     private final String mutationDescription;
 
@@ -36,7 +36,7 @@ public class Mutant {
 <span class="nc" id="L36">    }</span>
 
     /**
-     * Devuelve la descripciÃ³n del mutante.
+     * Devuelve la descripción del mutante.
      */
     public String getMutationDescription() {
 <span class="nc" id="L42">        return mutationDescription;</span>
@@ -58,7 +58,7 @@ public class Mutant {
 <span class="nc" id="L58">    }</span>
 
     /**
-     * Escribe el cÃ³digo del mutante a la carpeta indicada.
+     * Escribe el código del mutante a la carpeta indicada.
      */
     public void writeToFolder(String folderPath) throws IOException {
         // Agregamos &quot;org/autotest/mutants&quot; al path para que corresponda con el paquete de la clase.
@@ -74,13 +74,13 @@ public class Mutant {
 <span class="nc" id="L74">        String mutantFileName = newSimpleClassName + &quot;.java&quot;;</span>
 <span class="nc" id="L75">        Path mutantFilePath = Paths.get(destFolder.toString(), mutantFileName);</span>
 
-        // Armamos el cÃ³digo de la clase y reemplazamos el nombre original (StackAr) por el nuevo (StackArMutatedNNNN).
+        // Armamos el código de la clase y reemplazamos el nombre original (StackAr) por el nuevo (StackArMutatedNNNN).
 <span class="nc" id="L78">        String mutantCode = mutatedSpoonClass.toString();</span>
 <span class="nc" id="L79">        mutantCode = mutantCode.replace(mutatedSpoonClass.getSimpleName(), newSimpleClassName);</span>
 <span class="nc" id="L80">        mutantCode = mutantCode.replace(mutatedSpoonClass.getPackage().toString() + &quot;.&quot; + newSimpleClassName,</span>
                 MUTANTS_PACKAGE_NAME + &quot;.&quot; + newSimpleClassName);
 
-        // Agregamos package name al principio del cÃ³digo.
+        // Agregamos package name al principio del código.
 <span class="nc" id="L84">        mutantCode = &quot;package &quot; + MUTANTS_PACKAGE_NAME + &quot;;\n\n&quot; + mutantCode;</span>
 
         // Escribimos el archivo a disco.

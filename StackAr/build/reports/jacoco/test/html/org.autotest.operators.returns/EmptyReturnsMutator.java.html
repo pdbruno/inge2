@@ -9,10 +9,10 @@ import java.util.Arrays;
 import java.util.List;
 
 /**
- * Operador de mutaciÃ³n basado en https://pitest.org/quickstart/mutators/#EMPTY_RETURNS
+ * Operador de mutación basado en https://pitest.org/quickstart/mutators/#EMPTY_RETURNS
  *
- * Este operador reemplaza los valores de retorno de las funciones que devuelven String o int por valores &quot;vacÃ­os&quot;.
- * Por ejemplo, si la funciÃ³n tiene que devolver un String se reemplaza por &quot;&quot;.
+ * Este operador reemplaza los valores de retorno de las funciones que devuelven String o int por valores &quot;vacíos&quot;.
+ * Por ejemplo, si la función tiene que devolver un String se reemplaza por &quot;&quot;.
  * Si tiene que devolver un int se reemplaza por 0.
  */
 <span class="nc" id="L18">public class EmptyReturnsMutator extends MutationOperator {</span>
@@ -55,9 +55,9 @@ import java.util.List;
     @Override
     public String describeMutation(CtElement candidate) {
 <span class="nc" id="L57">        CtReturn op = (CtReturn)candidate;</span>
-<span class="nc" id="L58">        return this.getClass().getSimpleName() + &quot;: Se reemplazÃ³ &quot; +</span>
+<span class="nc" id="L58">        return this.getClass().getSimpleName() + &quot;: Se reemplazó &quot; +</span>
 <span class="nc" id="L59">                op.getReturnedExpression().toString() + &quot; por &quot; + getEmptyValueForReturnExpression(op).toString() +</span>
-<span class="nc" id="L60">                &quot; en la lÃ­nea &quot; + op.getPosition().getLine() + &quot;.&quot;;</span>
+<span class="nc" id="L60">                &quot; en la línea &quot; + op.getPosition().getLine() + &quot;.&quot;;</span>
     }
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.7.202105040129</span></div></body></html>

@@ -9,17 +9,17 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Clase que se encarga de generar los mutantes para un archivo de cÃ³digo fuente.
+ * Clase que se encarga de generar los mutantes para un archivo de código fuente.
  */
 public class MutantsGenerator {
 
     /**
-     * La ruta del archivo con el cÃ³digo fuente que se va a mutar.
+     * La ruta del archivo con el código fuente que se va a mutar.
      */
     private final String pathToSourceCodeToBeMutated;
 
     /**
-     * Los operadores de mutaciÃ³n que se van a aplicar.
+     * Los operadores de mutación que se van a aplicar.
      */
     private final List&lt;MutationOperator&gt; mutators;
 
@@ -31,12 +31,12 @@ public class MutantsGenerator {
 <span class="nc" id="L31">    }</span>
 
     /**
-     * Genera los mutantes para el archivo de cÃ³digo fuente.
+     * Genera los mutantes para el archivo de código fuente.
      */
     public List&lt;Mutant&gt; run() {
 <span class="nc" id="L37">        List&lt;Mutant&gt; mutants = new ArrayList&lt;&gt;();</span>
 
-        // Obtenemos la representaciÃ³n de Spoon para la clase que queremos mutar.
+        // Obtenemos la representación de Spoon para la clase que queremos mutar.
 <span class="nc" id="L40">        Launcher spoonLauncher = new Launcher();</span>
 <span class="nc" id="L41">        CtClass originalSpoonClass = getSpoonClassToBeMutated(spoonLauncher);</span>
 
@@ -49,7 +49,7 @@ public class MutantsGenerator {
     }
 
     /**
-     * Devuelve la representaciÃ³n de Spoon para la clase que queremos mutar.
+     * Devuelve la representación de Spoon para la clase que queremos mutar.
      * @param spoonLauncher El launcher de Spoon.
      */
     private CtClass getSpoonClassToBeMutated(Launcher spoonLauncher) {

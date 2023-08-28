@@ -10,9 +10,9 @@ import java.util.Arrays;
 import java.util.List;
 
 /**
- * Operador de mutaciÃ³n basado en https://pitest.org/quickstart/mutators/#NEGATE_CONDITIONALS
+ * Operador de mutación basado en https://pitest.org/quickstart/mutators/#NEGATE_CONDITIONALS
  *
- * Este operador de mutaciÃ³n reemplaca los condicionales por sus opuestos.
+ * Este operador de mutación reemplaca los condicionales por sus opuestos.
  * Por ejemplo, reemplaza &quot;a &gt; b&quot; por &quot;a &lt;= b&quot;.
  */
 <span class="nc" id="L18">public class NegateConditionsMutator extends MutationOperator {</span>
@@ -61,9 +61,9 @@ import java.util.List;
     @Override
     public String describeMutation(CtElement candidate) {
 <span class="nc" id="L63">        CtBinaryOperator op = (CtBinaryOperator)candidate;</span>
-<span class="nc" id="L64">        return this.getClass().getSimpleName() + &quot;: Se reemplazÃ³ &quot; +</span>
+<span class="nc" id="L64">        return this.getClass().getSimpleName() + &quot;: Se reemplazó &quot; +</span>
 <span class="nc" id="L65">                BinaryOperatorKindToString.get(op.getKind()) + &quot; por &quot; + BinaryOperatorKindToString.get(getReplacement(op.getKind())) +</span>
-<span class="nc" id="L66">                &quot; en la lÃ­nea &quot; + op.getPosition().getLine() + &quot;.&quot;;</span>
+<span class="nc" id="L66">                &quot; en la línea &quot; + op.getPosition().getLine() + &quot;.&quot;;</span>
     }
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.7.202105040129</span></div></body></html>

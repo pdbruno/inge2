@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>StackArMutated8129.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">StackAr</a> &gt; <a href="index.source.html" class="el_package">org.autotest.mutants</a> &gt; <span class="el_source">StackArMutated8129.java</span></div><h1>StackArMutated8129.java</h1><pre class="source lang-java linenums">package org.autotest.mutants;
 
 /**
- * ZeroConstantMutator: Se reemplazÃ³ 1 por 0 en la lÃ­nea 11.
+ * ZeroConstantMutator: Se reemplazó 1 por 0 en la línea 11.
  */
 public class StackArMutated8129 extends org.autotest.Stack {
     private static final int DEFAULT_CAPACITY = 10;
@@ -26,7 +26,7 @@ public class StackArMutated8129 extends org.autotest.Stack {
     }
 
     public boolean isEmpty() {
-<span class="pc bpc" id="L29" title="1 of 2 branches missed.">        return size() == 0;</span>
+<span class="nc bnc" id="L29" title="All 2 branches missed.">        return size() == 0;</span>
     }
 
     public boolean isFull() {
@@ -51,11 +51,11 @@ public class StackArMutated8129 extends org.autotest.Stack {
     }
 
     public java.lang.Object top() throws java.lang.IllegalStateException {
-<span class="pc bpc" id="L54" title="1 of 2 branches missed.">        if (isEmpty()) {</span>
+<span class="nc bnc" id="L54" title="All 2 branches missed.">        if (isEmpty()) {</span>
 <span class="nc" id="L55">            throw new java.lang.IllegalStateException();</span>
         }
-<span class="fc" id="L57">        java.lang.Object rv = this.elems[readIndex];</span>
-<span class="fc" id="L58">        return rv;</span>
+<span class="nc" id="L57">        java.lang.Object rv = this.elems[readIndex];</span>
+<span class="nc" id="L58">        return rv;</span>
     }
 
     @java.lang.Override

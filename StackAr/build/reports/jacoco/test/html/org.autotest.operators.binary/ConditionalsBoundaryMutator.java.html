@@ -10,9 +10,9 @@ import java.util.Arrays;
 import java.util.List;
 
 /**
- * Operador de mutaciÃ³n basado en https://pitest.org/quickstart/mutators/#CONDITIONALS_BOUNDARY
+ * Operador de mutación basado en https://pitest.org/quickstart/mutators/#CONDITIONALS_BOUNDARY
  *
- * Este operador de mutaciÃ³n reemplaza los operadores relacionales &lt;, &lt;=, &gt;, &gt;= por su contraparte de lÃ­mite.
+ * Este operador de mutación reemplaza los operadores relacionales &lt;, &lt;=, &gt;, &gt;= por su contraparte de límite.
  * Por ejemplo, el operador &lt;= se reemplaza por el operador &lt;.
  */
 <span class="nc" id="L18">public class ConditionalsBoundaryMutator extends MutationOperator {</span>
@@ -55,9 +55,9 @@ import java.util.List;
     @Override
     public String describeMutation(CtElement candidate) {
 <span class="nc" id="L57">        CtBinaryOperator op = (CtBinaryOperator)candidate;</span>
-<span class="nc" id="L58">        return this.getClass().getSimpleName() + &quot;: Se reemplazÃ³ &quot; +</span>
+<span class="nc" id="L58">        return this.getClass().getSimpleName() + &quot;: Se reemplazó &quot; +</span>
 <span class="nc" id="L59">                BinaryOperatorKindToString.get(op.getKind()) + &quot; por &quot; + BinaryOperatorKindToString.get(getReplacement(op.getKind())) +</span>
-<span class="nc" id="L60">                &quot; en la lÃ­nea &quot; + op.getPosition().getLine() + &quot;.&quot;;</span>
+<span class="nc" id="L60">                &quot; en la línea &quot; + op.getPosition().getLine() + &quot;.&quot;;</span>
     }
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.7.202105040129</span></div></body></html>
