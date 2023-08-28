@@ -30,16 +30,16 @@ public class StackArMutated9773 extends org.autotest.Stack {
     }
 
     public boolean isFull() {
-<span class="pc bpc" id="L33" title="1 of 2 branches missed.">        return size() == elems.length;</span>
+<span class="nc bnc" id="L33" title="All 2 branches missed.">        return size() == elems.length;</span>
     }
 
     public void push(java.lang.Object o) throws java.lang.IllegalStateException {
-<span class="pc bpc" id="L37" title="1 of 2 branches missed.">        if (isFull()) {</span>
+<span class="nc bnc" id="L37" title="All 2 branches missed.">        if (isFull()) {</span>
 <span class="nc" id="L38">            throw new java.lang.IllegalStateException();</span>
         }
-<span class="fc" id="L40">        this.readIndex++;</span>
-<span class="fc" id="L41">        this.elems[readIndex] = o;</span>
-<span class="fc" id="L42">    }</span>
+<span class="nc" id="L40">        this.readIndex++;</span>
+<span class="nc" id="L41">        this.elems[readIndex] = o;</span>
+<span class="nc" id="L42">    }</span>
 
     public java.lang.Object pop() throws java.lang.IllegalStateException {
 <span class="nc bnc" id="L45" title="All 2 branches missed.">        if (isEmpty()) {</span>

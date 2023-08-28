@@ -1,25 +1,25 @@
 1)
-a- Se generaron 81 mutantes
-b- Los operadores que generaron más mutantes fueron el FalseConditionalsMutator y el TrueConditionalsMutator con 10 mutantes generados. Nuestra hipótesis es que creemos que son los mutadores condicionales son los más generales, en el sentido que son los que pueden aplicarse más veces en distintos contextos. Prácticamente todo código posee una guarda para aplicar la mutación.
+a- Se generaron 85 mutantes
+b- Los operadores que generaron más mutantes fueron el FalseConditionalsMutator y el TrueConditionalsMutator con 10 mutantes generados. Nuestra hipótesis es que creemos que son los mutadores condicionales los más generales, en el sentido que son los que pueden aplicarse más veces en distintos contextos. Prácticamente todo código posee una guarda para aplicar la mutación.
 c- El operador que generó menos mutantes fue el NullReturnsMutator con 2 mutantes. Ésto se debe a la cantidad de returns donde se devuelven objetos no primitivos.
 
 2)
    Para el StackTests1:
- - sobrevivieron 59 mutantes
- - murieron 17
- - mutation score: 0.21333...
+ - sobrevivieron 67 mutantes
+ - murieron 18
+ - mutation score: 0.211764706
    Para el StackTests2:
- - sobrevivieron 44 mutantes
- - murieron 31
- - mutation score: 0.41333...
+ - sobrevivieron 50 mutantes
+ - murieron 35
+ - mutation score: 0.411764706
 
 3) a y b)
    Para el StackTests3:
- - sobrevivieron 18 mutantes
- - murieron 57
- - mutation score: 0.76
+ - sobrevivieron 21 mutantes
+ - murieron 64
+ - mutation score: 0.752941176
 
-c) De los 18 mutantes que sobrevivieron:
+c) De los 21 mutantes que sobrevivieron:
   - 13 son de la pinta reemplazar "1 por 1", "false por false" o similares, donde lo que se reemplaza es exactamente lo mismo que con lo que es reemplazado. Por lo que en estos casos la equivalencia es trivial.
   - StackArMutated7915 (MinusOneConstantMutator: Se reemplazó 31 por -1 en la línea 63.)
   - StackArMutated7845 (OneConstantMutator: Se reemplazó 31 por 1 en la línea 63.)
@@ -28,9 +28,13 @@ c) De los 18 mutantes que sobrevivieron:
     + Queda un "if (false)" que hace que el código del cuerpo sea inalcanzable. Pero el código es equivalente porque el chequeo de "this == obj" queda cubierto por el "return true" default. Por lo que es un indicador de que es código fútil.
   - StackArMutated8173 (FalseConditionalsMutator: Se reemplazó isEmpty() por false en la línea 45.)
     + Hace que quede inalcanzable el throw de IllegalStateException del pop, pero como el método llama a top, el que va a tirar la excepción es top(). Por lo que el código es equivalente (no se puede crear un test que haga fallar a este mutante) y muestra que ese if es innecesario.
+  - StackArMutated485 (MathMutator: Se reemplazó * por / en la línea 65.)
+  - StackArMutated8402 (MathMutator: Se reemplazó + por - en la línea 65.)
+  - StackArMutated3715 (MathMutator: Se reemplazó + por - en la línea 66.)
+    + Se modifican los valores de los hashcodes pero siguen siendo hashcodes válidos por lo que son equivalentes.
   - StackArMutated2163 (ZeroConstantMutator: Se reemplazó 1 por 0 en la línea 64.)
     + Quedan todos los hashcodes con offset 0 pero no es un problema porque siguen siendo hashcodes válidos y mantienen el comportamiento.
 
-d) Para las clases mutadas (org.autotest.mutants) el instruction coverage promedio fue 65% (4,886 de 14,227).
+d) Para las clases mutadas (org.autotest.mutants) el instruction coverage promedio fue 66% (5,370 de 16,157).
 
-e) El instruction coverage más bajo se logró con StackArMutated4116 en el que el coverage fue de apenas 4%. En este caso fue en un mutante que modificó la guarde de "capacity < 0" por true, por lo que siempre que el stack sea creado pasando una capacidad simplemente se arroja una excepción y no se utiliza ninguna otra instrucción del mutante.
+e) El instruction coverage más bajo se logró con StackArMutated7533 en el que el coverage fue de apenas 4%. En este caso fue en un mutante que modificó la guarde de "capacity < 0" por true, por lo que siempre que el stack sea creado pasando una capacidad simplemente se arroja una excepción y no se utiliza ninguna otra instrucción del mutante.

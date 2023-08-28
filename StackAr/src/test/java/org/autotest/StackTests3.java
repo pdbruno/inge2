@@ -128,4 +128,10 @@ public class StackTests3 extends MutationAnalysisRunner {
             stack.push(0);
         });
     }
+    public void testEqualsPopAndPushed() throws Exception {
+        Stack stack1 = createStack();
+        stack1.push(2);
+
+        assertEquals(2, stack1.pop());
+    }
 }
