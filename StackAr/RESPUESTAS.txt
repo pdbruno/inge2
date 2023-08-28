@@ -1,15 +1,12 @@
 1)
-a- Se generaron 75 mutantes
-b- El operador que generó más mutantes es el FalseConditionalsMutator y TrueConditionalsMutator con 10 mutantes generados. [TODO: ¿Cuántos y por qué?]
-c- Hubieron algunos operadores que no generaron ningún mutante: [TODO: ¿Cuántos y por qué?]
- - MathMutator
- - IncrementsMutator
- - NullReturns
+a- Se generaron 81 mutantes
+b- Los operadores que generaron más mutantes fueron el FalseConditionalsMutator y el TrueConditionalsMutator con 10 mutantes generados. Nuestra hipótesis es que creemos que son los mutadores condicionales son los más generales, en el sentido que son los que pueden aplicarse más veces en distintos contextos. Prácticamente todo código posee una guarda para aplicar la mutación.
+c- El operador que generó menos mutantes fue el NullReturnsMutator con 2 mutantes. Ésto se debe a la cantidad de returns donde se devuelven objetos no primitivos.
 
 2)
    Para el StackTests1:
  - sobrevivieron 59 mutantes
- - murieron 16
+ - murieron 17
  - mutation score: 0.21333...
    Para el StackTests2:
  - sobrevivieron 44 mutantes
