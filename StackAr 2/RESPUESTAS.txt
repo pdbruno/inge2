@@ -1,0 +1,20 @@
+Ejercicio 1
+
+a) Randoop produjo 548 casos de test
+b) Todos los casos de test pasan
+c) El instruction coverage es de 83%
+
+Ejercicio 2
+
+a) Ahora fallan 302 tests de 2403 en total. La falla en el chequeo del invariante surge de que al hacer pop() no se setea en null la posición de tope en elems
+b) Ver código
+c) Ahora es del 85%
+
+Ejercicio 3
+a) Pitest generó 46 mutantes. El mutation score (o coverage) es 64%
+b)
+No se puede extender el TestSuite para matar más mutantes ya que los sobrevivientes son todos equivalentes al código original.
+Se dividen en 3 categorías:
+	- Operan sobre el invariante (estos sobreviven porque no se ejecutan)
+	- Operan sobre el hashcode (las modificaciones mantinen la validez de hashcode)
+	- Operan sobre el equals (anulan el chequeo por igualdad de punteros pero igual da true ya que un objeto dado es observacionalmente equivalente a sí mismo)
