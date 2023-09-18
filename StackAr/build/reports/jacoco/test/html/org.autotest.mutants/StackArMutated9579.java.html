@@ -34,8 +34,8 @@ public class StackArMutated9579 extends org.autotest.Stack {
     }
 
     public void push(java.lang.Object o) throws java.lang.IllegalStateException {
-<span class="pc bpc" id="L37" title="1 of 2 branches missed.">        if (isFull()) {</span>
-<span class="nc" id="L38">            throw new java.lang.IllegalStateException();</span>
+<span class="fc bfc" id="L37" title="All 2 branches covered.">        if (isFull()) {</span>
+<span class="fc" id="L38">            throw new java.lang.IllegalStateException();</span>
         }
 <span class="fc" id="L40">        this.readIndex++;</span>
 <span class="fc" id="L41">        this.elems[readIndex] = o;</span>
@@ -51,8 +51,8 @@ public class StackArMutated9579 extends org.autotest.Stack {
     }
 
     public java.lang.Object top() throws java.lang.IllegalStateException {
-<span class="pc bpc" id="L54" title="1 of 2 branches missed.">        if (isEmpty()) {</span>
-<span class="nc" id="L55">            throw new java.lang.IllegalStateException();</span>
+<span class="fc bfc" id="L54" title="All 2 branches covered.">        if (isEmpty()) {</span>
+<span class="fc" id="L55">            throw new java.lang.IllegalStateException();</span>
         }
 <span class="fc" id="L57">        java.lang.Object rv = this.elems[readIndex];</span>
 <span class="fc" id="L58">        return rv;</span>
@@ -60,11 +60,11 @@ public class StackArMutated9579 extends org.autotest.Stack {
 
     @java.lang.Override
     public int hashCode() {
-<span class="nc" id="L63">        final int prime = 31;</span>
-<span class="nc" id="L64">        int result = 1;</span>
-<span class="nc" id="L65">        result = (prime * result) + java.util.Arrays.hashCode(elems);</span>
-<span class="nc" id="L66">        result = (prime * result) + readIndex;</span>
-<span class="nc" id="L67">        return result;</span>
+<span class="fc" id="L63">        final int prime = 31;</span>
+<span class="fc" id="L64">        int result = 1;</span>
+<span class="fc" id="L65">        result = (prime * result) + java.util.Arrays.hashCode(elems);</span>
+<span class="fc" id="L66">        result = (prime * result) + readIndex;</span>
+<span class="fc" id="L67">        return result;</span>
     }
 
     @java.lang.Override

@@ -25,7 +25,7 @@ import java.util.List;
                 &quot;int&quot;, &quot;float&quot;
         );
 
-<span class="nc" id="L28">        return targetTypes.contains(type);</span>
+<span class="nc bnc" id="L28" title="All 4 branches missed.">        return targetTypes.contains(type) &amp;&amp; ! op.getValue().equals(1);</span>
     }
 
     @Override

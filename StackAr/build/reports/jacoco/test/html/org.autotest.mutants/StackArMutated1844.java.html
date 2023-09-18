@@ -15,8 +15,8 @@ public class StackArMutated1844 extends org.autotest.Stack {
 <span class="fc" id="L15">    }</span>
 
 <span class="fc" id="L17">    public StackArMutated1844(int capacity) throws java.lang.IllegalArgumentException {</span>
-<span class="fc bfc" id="L18" title="All 2 branches covered.">        if (capacity &lt; 0) {</span>
-<span class="fc" id="L19">            throw new java.lang.IllegalArgumentException();</span>
+<span class="pc bpc" id="L18" title="1 of 2 branches missed.">        if (capacity &lt; 0) {</span>
+<span class="nc" id="L19">            throw new java.lang.IllegalArgumentException();</span>
         }
 <span class="fc" id="L21">        this.elems = new java.lang.Object[capacity];</span>
 <span class="fc" id="L22">    }</span>
@@ -69,39 +69,39 @@ public class StackArMutated1844 extends org.autotest.Stack {
 
     @java.lang.Override
     public boolean equals(java.lang.Object obj) {
-<span class="fc bfc" id="L72" title="All 2 branches covered.">        if (this == obj) {</span>
+<span class="pc bpc" id="L72" title="1 of 2 branches missed.">        if (this == obj) {</span>
 <span class="fc" id="L73">            return true;</span>
         }
-<span class="fc bfc" id="L75" title="All 2 branches covered.">        if (obj == null) {</span>
-<span class="fc" id="L76">            return false;</span>
+<span class="nc bnc" id="L75" title="All 2 branches missed.">        if (obj == null) {</span>
+<span class="nc" id="L76">            return false;</span>
         }
-<span class="pc bpc" id="L78" title="1 of 2 branches missed.">        if (getClass() != obj.getClass()) {</span>
+<span class="nc bnc" id="L78" title="All 2 branches missed.">        if (getClass() != obj.getClass()) {</span>
 <span class="nc" id="L79">            return false;</span>
         }
-<span class="fc" id="L81">        org.autotest.mutants.StackArMutated1844 other = ((org.autotest.mutants.StackArMutated1844) (obj));</span>
-<span class="pc bpc" id="L82" title="1 of 2 branches missed.">        if (!java.util.Arrays.equals(elems, other.elems)) {</span>
+<span class="nc" id="L81">        org.autotest.mutants.StackArMutated1844 other = ((org.autotest.mutants.StackArMutated1844) (obj));</span>
+<span class="nc bnc" id="L82" title="All 2 branches missed.">        if (!java.util.Arrays.equals(elems, other.elems)) {</span>
 <span class="nc" id="L83">            return false;</span>
         }
-<span class="pc bpc" id="L85" title="1 of 2 branches missed.">        if (readIndex != other.readIndex) {</span>
+<span class="nc bnc" id="L85" title="All 2 branches missed.">        if (readIndex != other.readIndex) {</span>
 <span class="nc" id="L86">            return false;</span>
         }
-<span class="fc" id="L88">        return true;</span>
+<span class="nc" id="L88">        return true;</span>
     }
 
     @java.lang.Override
     public java.lang.String toString() {
-<span class="fc" id="L93">        java.lang.StringBuffer b = new java.lang.StringBuffer();</span>
-<span class="fc" id="L94">        b.append(&quot;[&quot;);</span>
-<span class="fc bfc" id="L95" title="All 2 branches covered.">        for (int i = 0; i &lt;= readIndex; i++) {</span>
-<span class="fc bfc" id="L96" title="All 2 branches covered.">            if (i &gt; 0) {</span>
-<span class="fc" id="L97">                b.append(&quot;,&quot;);</span>
+<span class="nc" id="L93">        java.lang.StringBuffer b = new java.lang.StringBuffer();</span>
+<span class="nc" id="L94">        b.append(&quot;[&quot;);</span>
+<span class="nc bnc" id="L95" title="All 2 branches missed.">        for (int i = 0; i &lt;= readIndex; i++) {</span>
+<span class="nc bnc" id="L96" title="All 2 branches missed.">            if (i &gt; 0) {</span>
+<span class="nc" id="L97">                b.append(&quot;,&quot;);</span>
             }
-<span class="fc" id="L99">            java.lang.Object o = elems[i];</span>
-<span class="fc" id="L100">            java.lang.String s = java.lang.String.valueOf(o);</span>
-<span class="fc" id="L101">            b.append(s);</span>
+<span class="nc" id="L99">            java.lang.Object o = elems[i];</span>
+<span class="nc" id="L100">            java.lang.String s = java.lang.String.valueOf(o);</span>
+<span class="nc" id="L101">            b.append(s);</span>
         }
-<span class="fc" id="L103">        b.append(&quot;]&quot;);</span>
-<span class="fc" id="L104">        return b.toString();</span>
+<span class="nc" id="L103">        b.append(&quot;]&quot;);</span>
+<span class="nc" id="L104">        return b.toString();</span>
     }
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.7.202105040129</span></div></body></html>
