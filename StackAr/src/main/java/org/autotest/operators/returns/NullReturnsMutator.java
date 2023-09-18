@@ -16,7 +16,7 @@ import java.util.List;
 public class NullReturnsMutator extends MutationOperator {
     @Override
     public boolean isToBeProcessed(CtElement candidate) {
-        return (candidate instanceof CtReturn) && ((CtReturn) candidate).getReturnedExpression().getType().toString().equals("java.lang.Object");
+        return (candidate instanceof CtReturn) && !((CtReturn) candidate).getReturnedExpression().getType().isPrimitive();
     }
 
     @Override

@@ -16,7 +16,7 @@ import java.util.List;
 <span class="nc" id="L16">public class NullReturnsMutator extends MutationOperator {</span>
     @Override
     public boolean isToBeProcessed(CtElement candidate) {
-<span class="nc bnc" id="L19" title="All 4 branches missed.">        return (candidate instanceof CtReturn) &amp;&amp; ((CtReturn) candidate).getReturnedExpression().getType().toString().equals(&quot;java.lang.Object&quot;);</span>
+<span class="nc bnc" id="L19" title="All 4 branches missed.">        return (candidate instanceof CtReturn) &amp;&amp; !((CtReturn) candidate).getReturnedExpression().getType().isPrimitive();</span>
     }
 
     @Override

@@ -1,31 +1,32 @@
 1)
-a- Se generaron 71 mutantes
+a- Se generaron 73 mutantes
 b- Los operadores que generaron más mutantes fueron el FalseConditionalsMutator y el TrueConditionalsMutator con 10 mutantes generados. Nuestra hipótesis es que creemos que son los mutadores condicionales los más generales, en el sentido que son los que pueden aplicarse más veces en distintos contextos. Prácticamente todo código posee una guarda para aplicar la mutación.
-c- El operador que generó menos mutantes fue el NullReturnsMutator con 2 mutantes. Ésto se debe a la cantidad de returns donde se devuelven objetos no primitivos.
+c- Los operadores que generaron menos mutantes fueron el EmptyReturnsMutator, NullReturnsMutator, IncrementsMutator y el ConditionalsBoundaryMutator con 3 mutantes cada uno. Ésto se debe a la cantidad de lugares en el código donde se pueden aplicar los operadores. Respectivamente, de returns donde se devuelven strings o ints, de returns donde se devuelven objetos no primitivos, de "++" o "--", y operadores relacionales.
 
 2)
    Para el StackTests1:
- - sobrevivieron 53 mutantes
+ - sobrevivieron 55 mutantes
  - murieron 18
- - mutation score: 0.253521127
+ - mutation score: 0.246575342
    Para el StackTests2:
- - sobrevivieron 36 mutantes
- - murieron 35
- - mutation score: 0.492957746
+ - sobrevivieron 37 mutantes
+ - murieron 36
+ - mutation score: 0.493150685
 
 3) a y b)
    Para el StackTests3:
  - sobrevivieron 3 mutantes
- - murieron 68
+ - murieron 70
  - mutation score: 0.957746479
 
-c) De los 21 mutantes que sobrevivieron:
-  - StackArMutated1193 (FalseConditionalsMutator: Se reemplazó this == obj por false en la línea 72.)
+c) De los 3 mutantes que sobrevivieron:
+  - StackArMutated9223 (FalseConditionalsMutator: Se reemplazó this == obj por false en la línea 72.)
     + Queda un "if (false)" que hace que el código del cuerpo sea inalcanzable. Pero el código es equivalente porque el chequeo de "this == obj" queda cubierto por el "return true" default. Por lo que es un indicador de que es código fútil.
-  - StackArMutated4329 (FalseConditionalsMutator: Se reemplazó isEmpty() por false en la línea 45.)
+  - StackArMutated9772 (FalseConditionalsMutator: Se reemplazó isEmpty() por false en la línea 45.)
     + Hace que quede inalcanzable el throw de IllegalStateException del pop, pero como el método llama a top, el que va a tirar la excepción es top(). Por lo que el código es equivalente (no se puede crear un test que haga fallar a este mutante) y muestra que ese if es innecesario.
-  - StackArMutated1337 (MathMutator: Se reemplazó * por / en la línea 65.)
+  - StackArMutated6784 (MathMutator: Se reemplazó * por / en la línea 65.)
     + Originalmente, se hace prime * result. Pero como en ese momento result=1 por definición de la línea 64, multiplicar o dividir por result es multiplicar o dividir por 1, lo que es equivalente e inocuo.
-d) Para las clases mutadas (org.autotest.mutants) el instruction coverage promedio fue 60% (5,314 de 13,455).
 
-e) El instruction coverage más bajo se logró con StackArMutated9773 en el que el coverage fue de apenas 4%. En este caso fue en un mutante que modificó la guarde de "capacity < 0" por true, por lo que siempre que el stack sea creado pasando una capacidad simplemente se arroja una excepción y no se utiliza ninguna otra instrucción del mutante.
+d) Para las clases mutadas (org.autotest.mutants) el instruction coverage promedio fue 60% (5,402 de 13,840).
+
+e) El instruction coverage más bajo se logró con StackArMutated8313 en el que el coverage fue de apenas 4%. En este caso fue en un mutante que modificó la guarde de "capacity < 0" por true, por lo que siempre que el stack sea creado pasando una capacidad simplemente se arroja una excepción y no se utiliza ninguna otra instrucción del mutante.
