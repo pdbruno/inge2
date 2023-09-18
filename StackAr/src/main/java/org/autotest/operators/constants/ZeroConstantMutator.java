@@ -25,7 +25,7 @@ public class ZeroConstantMutator extends MutationOperator {
                 "int", "float"
         );
 
-        return targetTypes.contains(type);
+        return targetTypes.contains(type) && ! op.getValue().equals(0);
     }
 
     @Override

@@ -16,7 +16,11 @@ import java.util.List;
 public class TrueReturnsMutator extends MutationOperator {
     @Override
     public boolean isToBeProcessed(CtElement candidate) {
-        return (candidate instanceof CtReturn) && ((CtReturn) candidate).getReturnedExpression().getType().toString().equals("boolean");
+        if (!(candidate instanceof CtReturn)) {
+            return false;
+        }
+        CtReturn op =  (CtReturn) candidate;
+        return ! op.getReturnedExpression().toString().equals("true") && op.getReturnedExpression().getType().toString().equals("boolean");
     }
 
     @Override

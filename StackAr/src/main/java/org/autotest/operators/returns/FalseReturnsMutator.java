@@ -12,7 +12,11 @@ import spoon.reflect.declaration.CtElement;
 public class FalseReturnsMutator extends MutationOperator {
     @Override
     public boolean isToBeProcessed(CtElement candidate) {
-        return (candidate instanceof CtReturn) && ((CtReturn) candidate).getReturnedExpression().getType().toString().equals("boolean");
+        if (!(candidate instanceof CtReturn)) {
+            return false;
+        }
+        CtReturn op =  (CtReturn) candidate;
+        return ! op.getReturnedExpression().toString().equals("false") && op.getReturnedExpression().getType().toString().equals("boolean");
     }
 
     @Override

@@ -25,7 +25,7 @@ public class OneConstantMutator extends MutationOperator {
                 "int", "float"
         );
 
-        return targetTypes.contains(type);
+        return targetTypes.contains(type) && ! op.getValue().equals(1);
     }
 
     @Override
