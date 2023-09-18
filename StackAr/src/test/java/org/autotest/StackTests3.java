@@ -134,4 +134,11 @@ public class StackTests3 extends MutationAnalysisRunner {
 
         assertEquals(2, stack1.pop());
     }
+
+    public void testHashCode() throws Exception {
+        Stack stack1 = createStack();
+        stack1.push(2);
+        stack1.push(2);
+        assertEquals(437121249, stack1.hashCode());
+    }
 }
