@@ -80,4 +80,4 @@ class GeneticAlgorithm():
             self.fitness_best_individual = fitness_by_individual[self.best_individual]
 
         # retornar el mejor individuo de la ultima generacion
-        return self.best_individual
+        return list(self.best_individual)
