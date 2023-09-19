@@ -50,6 +50,12 @@ def has_reached_condition(condition_num):
 
 
 def evaluate_condition(condition_num, op, lhs, rhs):
+    """ 
+        Recibe un número de condición, un operador, un operando izquierdo y un operando derecho.
+        Casteo los datos de string a int cuando corresponde para poder compararlos.
+        Devuelve el resultado de evaluar la condición.
+        Actualiza los mappings globales distances_true y distances_false.  
+    """
     if isinstance(lhs, str) and op != "In":
         lhs = ord(lhs)
 

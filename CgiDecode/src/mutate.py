@@ -2,6 +2,9 @@ from random import choice, randint, choices
 from string import printable
 
 def mutate(individual):
+    """ 
+        Muta un test suite o un test case
+    """
     if isinstance(individual, str):
         return mutate_string(individual)
     elif isinstance(individual, list):
@@ -10,6 +13,9 @@ def mutate(individual):
         raise ValueError(f"Not a valid individual {individual}")
     
 def mutate_string(individual):
+    """ 
+        Muta un test case según lo establecido en la consigna.
+    """
     def is_elimination_candidate(individual):
         return len(individual) > 1
     
@@ -43,6 +49,9 @@ def mutate_string(individual):
     return mutation_method(individual)
 
 def mutate_test_suite(individual):
+    """ 
+        Muta un test suite según lo establecido en la consigna.
+    """
     def is_elimination_candidate(individual):
         return len(individual) > 1
     

@@ -26,9 +26,12 @@ class GeneticAlgorithm():
         return self.generation
     
     def _best_individual(self, fitness_by_individual):
+        """ 
+        Obtener el individuo con mejor fitness de la poblacion.
+        """
         best_individual, max_fitness = next(iter(fitness_by_individual.items()))
         for individual, fitness in fitness_by_individual.items():
-            if fitness > max_fitness:
+            if fitness < max_fitness:
                 max_fitness = fitness
                 best_individual = individual
         return individual
@@ -44,35 +47,21 @@ class GeneticAlgorithm():
 
         # Continuar mientras la cantidad de generaciones es menor que 1000
         # y no haya ningun individuo que cubra todos los objetivos
-
         while self.fitness_best_individual > 0 and self.generation < 1000:
-            print(self.generation)
-            # Producir una nueva poblacion en base a la anterior.
-            # Usar selection, crossover y mutation.
 
             new_population_selection = []
             while len(new_population_selection) < self.population_size:
                 # Elijo padres con reposición
                 parent_1, parent_2 = selection(fitness_by_individual, self.tournament_size), selection(fitness_by_individual, self.tournament_size)
-                if uniform(0, 1) < self.p_crossover:
-                    offspring1, offspring2 = crossover(parent_1, parent_2)
-                    selected_1 = offspring1
-                    selected_2 = offspring2
-                else:
-                    selected_1 = parent_1
-                    selected_2 = parent_2
-                
+                # Elijo si cruzo o no con probabilidad p_crossover
+                selected_1, selected_2 = crossover(parent_1, parent_2) if uniform(0, 1) < self.p_crossover else (parent_1, parent_2)
                 new_population_selection.append(selected_1)
                 new_population_selection.append(selected_2)
 
-            new_population = new_population_selection
-            for index, element in enumerate(new_population_selection):
-                if uniform(0, 1) < self.p_mutation:
-                    new_population[index] = mutate(element)
+            # Mutar la nueva poblacion con probabilidad p_mutation
+            population = [mutate(element) if uniform(0, 1) < self.p_mutation else element for element in new_population_selection]
 
-            # Una vez creada, reemplazar la poblacion anterior con la nueva
             self.generation += 1
-            population = new_population
 
             # Evaluar la nueva poblacion e imprimir el mejor valor de fitness
             fitness_by_individual = evaluate_population(population)

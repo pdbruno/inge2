@@ -3,6 +3,9 @@ from src.evaluate_condition import clear_maps, get_true_distance, get_false_dist
 
 
 def get_fitness_cgi_decode(test_suite):
+    """ 
+    Para cada objetivo, sumamos 1 si no se alcanzó el branch, o la distancia normalizada de los branches true y false si se alcanzó.
+    """
     clear_maps()
     fitness = 0
     for test_case in test_suite:
