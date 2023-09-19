@@ -15,4 +15,4 @@ class TestSelection(unittest.TestCase):
         population = create_population(5)
         fitness_by_individual = evaluate_population(population)
         winner_pred = selection(fitness_by_individual, 3)
-        self.assertEqual(("S<cx8s9?C",), winner_pred)
+        self.assertEqual(["S<cx8s9?C"], winner_pred)

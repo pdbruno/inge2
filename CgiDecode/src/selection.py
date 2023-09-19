@@ -7,4 +7,4 @@ def selection(fitness_by_individual, tournament_size):
     for individual, fitness in fitness_by_individual.items():
         if fitness > max_fitness:
             winner, max_fitness = individual, fitness
-    return winner
+    return list(winner)

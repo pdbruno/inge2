@@ -7,15 +7,18 @@ from src.genetic_algorithm import GeneticAlgorithm
 
 class TestGeneticAlgorithm(unittest.TestCase):
     def test1(self):
-        # COMPLETAR
         seed(1)
         ga = GeneticAlgorithm()
         result = ga.run()
-        self.assertEqual(True, False)
+        self.assertEqual(result, ('', '', '4', ''))
+        self.assertEqual(ga.generation, 1000)
 
     def test2(self):
-        # COMPLETAR
-        pass
+        seed(44)
+        ga = GeneticAlgorithm()
+        result = ga.run()
+        self.assertEqual(result, ('', '', '$'))
+        self.assertEqual(ga.generation, 1000)
 
     def test3(self):
         # COMPLETAR
