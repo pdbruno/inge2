@@ -1,6 +1,6 @@
 from fuzzingbook.MutationFuzzer import FunctionCoverageRunner
-from crashme import crashme
-from get_source_lines import get_source_lines
+from src.crashme import crashme
+from src.get_source_lines import get_source_lines
 
 if __name__ == "__main__":
     input = "good"
