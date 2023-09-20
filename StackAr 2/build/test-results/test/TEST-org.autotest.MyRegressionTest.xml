@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="org.autotest.MyRegressionTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2023-09-05T02:07:18" hostname="NOTEBOOKPATO" time="0.05">
+  <properties/>
+  <testcase name="test001()" classname="org.autotest.MyRegressionTest" time="0.05"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

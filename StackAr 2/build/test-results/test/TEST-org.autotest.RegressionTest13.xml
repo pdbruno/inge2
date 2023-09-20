@@ -1,54 +1,54 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="org.autotest.RegressionTest13" tests="50" skipped="0" failures="0" errors="0" timestamp="2023-08-29T01:22:10" hostname="NOTEBOOKPATO" time="0.022">
+<testsuite name="org.autotest.RegressionTest13" tests="50" skipped="0" failures="0" errors="0" timestamp="2023-09-05T02:07:19" hostname="NOTEBOOKPATO" time="0.046">
   <properties/>
   <testcase name="test651()" classname="org.autotest.RegressionTest13" time="0.001"/>
-  <testcase name="test652()" classname="org.autotest.RegressionTest13" time="0.0"/>
+  <testcase name="test652()" classname="org.autotest.RegressionTest13" time="0.001"/>
   <testcase name="test653()" classname="org.autotest.RegressionTest13" time="0.001"/>
-  <testcase name="test654()" classname="org.autotest.RegressionTest13" time="0.0"/>
+  <testcase name="test654()" classname="org.autotest.RegressionTest13" time="0.001"/>
   <testcase name="test655()" classname="org.autotest.RegressionTest13" time="0.001"/>
-  <testcase name="test656()" classname="org.autotest.RegressionTest13" time="0.0"/>
-  <testcase name="test657()" classname="org.autotest.RegressionTest13" time="0.001"/>
-  <testcase name="test658()" classname="org.autotest.RegressionTest13" time="0.0"/>
+  <testcase name="test656()" classname="org.autotest.RegressionTest13" time="0.001"/>
+  <testcase name="test657()" classname="org.autotest.RegressionTest13" time="0.0"/>
+  <testcase name="test658()" classname="org.autotest.RegressionTest13" time="0.001"/>
   <testcase name="test659()" classname="org.autotest.RegressionTest13" time="0.001"/>
   <testcase name="test660()" classname="org.autotest.RegressionTest13" time="0.0"/>
   <testcase name="test661()" classname="org.autotest.RegressionTest13" time="0.0"/>
   <testcase name="test662()" classname="org.autotest.RegressionTest13" time="0.0"/>
   <testcase name="test663()" classname="org.autotest.RegressionTest13" time="0.0"/>
   <testcase name="test664()" classname="org.autotest.RegressionTest13" time="0.001"/>
-  <testcase name="test665()" classname="org.autotest.RegressionTest13" time="0.0"/>
-  <testcase name="test666()" classname="org.autotest.RegressionTest13" time="0.0"/>
+  <testcase name="test665()" classname="org.autotest.RegressionTest13" time="0.001"/>
+  <testcase name="test666()" classname="org.autotest.RegressionTest13" time="0.001"/>
   <testcase name="test667()" classname="org.autotest.RegressionTest13" time="0.0"/>
-  <testcase name="test668()" classname="org.autotest.RegressionTest13" time="0.0"/>
-  <testcase name="test669()" classname="org.autotest.RegressionTest13" time="0.0"/>
+  <testcase name="test668()" classname="org.autotest.RegressionTest13" time="0.001"/>
+  <testcase name="test669()" classname="org.autotest.RegressionTest13" time="0.001"/>
   <testcase name="test670()" classname="org.autotest.RegressionTest13" time="0.0"/>
   <testcase name="test671()" classname="org.autotest.RegressionTest13" time="0.001"/>
-  <testcase name="test672()" classname="org.autotest.RegressionTest13" time="0.0"/>
-  <testcase name="test673()" classname="org.autotest.RegressionTest13" time="0.001"/>
+  <testcase name="test672()" classname="org.autotest.RegressionTest13" time="0.001"/>
+  <testcase name="test673()" classname="org.autotest.RegressionTest13" time="0.0"/>
   <testcase name="test674()" classname="org.autotest.RegressionTest13" time="0.001"/>
-  <testcase name="test675()" classname="org.autotest.RegressionTest13" time="0.0"/>
-  <testcase name="test676()" classname="org.autotest.RegressionTest13" time="0.0"/>
-  <testcase name="test677()" classname="org.autotest.RegressionTest13" time="0.0"/>
-  <testcase name="test678()" classname="org.autotest.RegressionTest13" time="0.001"/>
-  <testcase name="test679()" classname="org.autotest.RegressionTest13" time="0.0"/>
+  <testcase name="test675()" classname="org.autotest.RegressionTest13" time="0.001"/>
+  <testcase name="test676()" classname="org.autotest.RegressionTest13" time="0.001"/>
+  <testcase name="test677()" classname="org.autotest.RegressionTest13" time="0.001"/>
+  <testcase name="test678()" classname="org.autotest.RegressionTest13" time="0.002"/>
+  <testcase name="test679()" classname="org.autotest.RegressionTest13" time="0.001"/>
   <testcase name="test680()" classname="org.autotest.RegressionTest13" time="0.0"/>
   <testcase name="test681()" classname="org.autotest.RegressionTest13" time="0.0"/>
   <testcase name="test682()" classname="org.autotest.RegressionTest13" time="0.0"/>
   <testcase name="test683()" classname="org.autotest.RegressionTest13" time="0.001"/>
-  <testcase name="test684()" classname="org.autotest.RegressionTest13" time="0.0"/>
-  <testcase name="test685()" classname="org.autotest.RegressionTest13" time="0.001"/>
+  <testcase name="test684()" classname="org.autotest.RegressionTest13" time="0.002"/>
+  <testcase name="test685()" classname="org.autotest.RegressionTest13" time="0.0"/>
   <testcase name="test686()" classname="org.autotest.RegressionTest13" time="0.0"/>
-  <testcase name="test687()" classname="org.autotest.RegressionTest13" time="0.0"/>
+  <testcase name="test687()" classname="org.autotest.RegressionTest13" time="0.001"/>
   <testcase name="test688()" classname="org.autotest.RegressionTest13" time="0.001"/>
-  <testcase name="test689()" classname="org.autotest.RegressionTest13" time="0.0"/>
+  <testcase name="test689()" classname="org.autotest.RegressionTest13" time="0.001"/>
   <testcase name="test690()" classname="org.autotest.RegressionTest13" time="0.001"/>
-  <testcase name="test691()" classname="org.autotest.RegressionTest13" time="0.0"/>
-  <testcase name="test692()" classname="org.autotest.RegressionTest13" time="0.0"/>
-  <testcase name="test693()" classname="org.autotest.RegressionTest13" time="0.001"/>
-  <testcase name="test694()" classname="org.autotest.RegressionTest13" time="0.0"/>
-  <testcase name="test695()" classname="org.autotest.RegressionTest13" time="0.0"/>
+  <testcase name="test691()" classname="org.autotest.RegressionTest13" time="0.001"/>
+  <testcase name="test692()" classname="org.autotest.RegressionTest13" time="0.001"/>
+  <testcase name="test693()" classname="org.autotest.RegressionTest13" time="0.0"/>
+  <testcase name="test694()" classname="org.autotest.RegressionTest13" time="0.001"/>
+  <testcase name="test695()" classname="org.autotest.RegressionTest13" time="0.001"/>
   <testcase name="test696()" classname="org.autotest.RegressionTest13" time="0.001"/>
-  <testcase name="test697()" classname="org.autotest.RegressionTest13" time="0.0"/>
-  <testcase name="test698()" classname="org.autotest.RegressionTest13" time="0.0"/>
+  <testcase name="test697()" classname="org.autotest.RegressionTest13" time="0.001"/>
+  <testcase name="test698()" classname="org.autotest.RegressionTest13" time="0.001"/>
   <testcase name="test699()" classname="org.autotest.RegressionTest13" time="0.001"/>
   <testcase name="test700()" classname="org.autotest.RegressionTest13" time="0.0"/>
   <system-out><![CDATA[]]></system-out>

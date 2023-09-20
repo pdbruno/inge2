@@ -13,8 +13,8 @@ c) Ahora es del 85%
 Ejercicio 3
 a) Pitest generó 46 mutantes. El mutation score (o coverage) es 64%
 b)
-No se puede extender el TestSuite para matar más mutantes ya que los sobrevivientes son todos equivalentes al código original.
-Se dividen en 3 categorías:
+Se extendió el test suite para testear también el hashcode. El mutation score se elevó a 72%. Sin embargo, quedaron vivos algunos mutantes.
+Estos se dividen en 3 categorías:
 	- Operan sobre el invariante (estos sobreviven porque no se ejecutan)
-	- Operan sobre el hashcode (las modificaciones mantinen la validez de hashcode)
-	- Operan sobre el equals (anulan el chequeo por igualdad de punteros pero igual da true ya que un objeto dado es observacionalmente equivalente a sí mismo)
+	- Uno que opera sobre el hashcode y consiste en cambiar una multiplicación (por 1) por una división (por 1) (son equivalentes)
+	- Uno que opera sobre el equals (anulan el chequeo por igualdad de punteros pero igual da true ya que un objeto dado es observacionalmente equivalente a sí mismo)
