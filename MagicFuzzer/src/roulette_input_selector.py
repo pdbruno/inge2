@@ -38,4 +38,4 @@ class RouletteInputSelector:
         energias_cosmicas = [self.get_energy(s) for s in inputs]
         cosmos = sum(energias_cosmicas)
         probabilidades_de_coincidir_y_conectar = [e/cosmos for e in energias_cosmicas]
-        return random.choices(input, weights=probabilidades_de_coincidir_y_conectar, k=1)[0]
+        return random.choices(inputs, weights=probabilidades_de_coincidir_y_conectar, k=1)[0]

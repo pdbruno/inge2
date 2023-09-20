@@ -3,7 +3,6 @@ import string
 
 def insert_random_character(s: str) -> str:
     """Retorna s con un caracter random insertado en una posicion al azar"""
-    random.seed(0)
     index = random.randint(0, len(s))
     return s[:index] + random.choice(string.printable) + s[index:] 
 

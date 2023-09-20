@@ -70,7 +70,7 @@ class MagicFuzzer:
         """
         iteraciones = 0
         covered = []
-        while len(covered) != self.source_lines:
+        while len(covered) != self.source_lines - 1:
             iteraciones+=1
             self.fuzz()
             covered = [f_line for f_name, f_line in self.covered_locations if f_name == self.method_name]

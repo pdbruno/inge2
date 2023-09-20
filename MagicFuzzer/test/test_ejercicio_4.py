@@ -7,7 +7,7 @@ from src import magic_fuzzer
 class TestEjercicio4(unittest.TestCase):
 
     def test(self):
-        random.seed(0)
+        random.seed(69)
         f = magic_fuzzer.MagicFuzzer(' ', crashme.crashme, 'crashme')
         iteraciones = f.run_until_covered()
         print(f'iteraciones = {iteraciones}')
