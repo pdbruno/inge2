@@ -23,4 +23,30 @@ class TestEjercicio5(unittest.TestCase):
         cantidad_maxima_lineas_cubiertas = len(f.get_covered_locations())
         self.assertEqual(cantidad_maxima_lineas_cubiertas, 480)
 
-#4 veces mas
+    def test2(self):
+        random.seed(2)
+        f = magic_fuzzer.MagicFuzzer(' ', my_parser.my_parser)
+        f.run_iterations(5000)
+        cantidad_maxima_lineas_cubiertas = len(f.get_covered_locations())
+        self.assertEqual(cantidad_maxima_lineas_cubiertas, 169)
+
+    def test3(self):
+        random.seed(3)
+        f = magic_fuzzer.MagicFuzzer(' ', my_parser.my_parser)
+        f.run_iterations(5000)
+        cantidad_maxima_lineas_cubiertas = len(f.get_covered_locations())
+        self.assertEqual(cantidad_maxima_lineas_cubiertas, 178)
+
+    def test4(self):
+        random.seed(4)
+        f = magic_fuzzer.MagicFuzzer(' ', my_parser.my_parser)
+        f.run_iterations(5000)
+        cantidad_maxima_lineas_cubiertas = len(f.get_covered_locations())
+        self.assertEqual(cantidad_maxima_lineas_cubiertas, 193)
+
+    def test5(self):
+        random.seed(5)
+        f = magic_fuzzer.MagicFuzzer(' ', my_parser.my_parser)
+        f.run_iterations(5000)
+        cantidad_maxima_lineas_cubiertas = len(f.get_covered_locations())
+        self.assertEqual(cantidad_maxima_lineas_cubiertas, 169)
