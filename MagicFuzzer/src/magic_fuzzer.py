@@ -13,7 +13,7 @@ from src.get_source_lines import get_source_lines
 
 class MagicFuzzer:
     def __init__(
-        self, initial_inputs, function_to_call, function_name_to_call=None
+        self, initial_inputs, function_to_call, function_name_to_call=None, roulette_exponent=2
     ) -> None:
         """Ejecuta inputs iniciales, almacenando la cobertura obtenida"""
         self.source_lines = get_source_lines(function_to_call)
@@ -22,11 +22,15 @@ class MagicFuzzer:
         self.lines_covered = {}
         self.contributing_inputs = []
         self.covered_locations = set()
-        self.roulette_input_selector = RouletteInputSelector(2)
+        self.roulette_input_selector = RouletteInputSelector(roulette_exponent)
         for input in initial_inputs:
             self.run_input(input)
 
     def run_input(self, input):
+        """
+        Ejecuta un input particular y actualiza las nuevas lineas cubiertas
+        y variables internas asociadas.
+        """
         self.runner.run(input)
         locations = self.runner.coverage()
         self.roulette_input_selector.add_new_execution(input, locations)
