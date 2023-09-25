@@ -35,7 +35,7 @@ class RouletteInputSelector:
     def select(self) -> str:
         """Elije aleatoriamente un s usando seleccion de ruleta sobre e(s)"""
         inputs = list(self.s_to_path.keys())
-        energias_cosmicas = [self.get_energy(s) for s in inputs]
-        cosmos = sum(energias_cosmicas)
-        probabilidades_de_coincidir_y_conectar = [e/cosmos for e in energias_cosmicas]
-        return random.choices(inputs, weights=probabilidades_de_coincidir_y_conectar, k=1)[0]
+        inputs_energies = [self.get_energy(s) for s in inputs]
+        sum_energies = sum(inputs_energies)
+        inputs_probs = [e/sum_energies for e in inputs_energies]
+        return random.choices(inputs, weights=inputs_probs, k=1)[0]
