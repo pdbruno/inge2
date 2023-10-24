@@ -45,7 +45,7 @@ public enum ZeroAbstractValue {
      * @return the result of the addition.
      */
     public ZeroAbstractValue add(ZeroAbstractValue another) {
-        
+        //version compacta de la tabla de suma de valores abstractos de cero
         if (this == ZeroAbstractValue.BOTTOM || another == ZeroAbstractValue.BOTTOM){
             return  ZeroAbstractValue.BOTTOM;
         } else if (this == ZeroAbstractValue.MAYBE_ZERO || another == ZeroAbstractValue.MAYBE_ZERO) {
@@ -67,6 +67,7 @@ public enum ZeroAbstractValue {
      * @return the result of the division.
      */
     public ZeroAbstractValue divideBy(ZeroAbstractValue another) {
+        //version compacta de la tabla de division de valores abstractos de cero
         if (this == ZeroAbstractValue.BOTTOM || another == ZeroAbstractValue.BOTTOM || another == ZeroAbstractValue.ZERO){
             return  ZeroAbstractValue.BOTTOM;
         } else if (this == ZeroAbstractValue.ZERO && another == ZeroAbstractValue.NOT_ZERO) {
@@ -74,7 +75,7 @@ public enum ZeroAbstractValue {
         } else if (this == ZeroAbstractValue.NOT_ZERO && another == ZeroAbstractValue.NOT_ZERO) {
             return ZeroAbstractValue.NOT_ZERO;
         } else if (this == ZeroAbstractValue.MAYBE_ZERO && another == ZeroAbstractValue.NOT_ZERO) {
-            return ZeroAbstractValue.NOT_ZERO;
+            return ZeroAbstractValue.MAYBE_ZERO;
         } else { // if (another == ZeroAbstractValue.MAYBE_ZERO)
             return ZeroAbstractValue.MAYBE_ZERO;
         }
@@ -86,12 +87,13 @@ public enum ZeroAbstractValue {
      * @return the result of the multiplication.
      */
     public ZeroAbstractValue multiplyBy(ZeroAbstractValue another) {
+        //version compacta de la tabla de multiplicacion de valores abstractos de cero
         if (this == ZeroAbstractValue.BOTTOM || another == ZeroAbstractValue.BOTTOM){
             return  ZeroAbstractValue.BOTTOM;
-        } else if (this == ZeroAbstractValue.MAYBE_ZERO || another == ZeroAbstractValue.MAYBE_ZERO) {
-            return ZeroAbstractValue.MAYBE_ZERO;
         } else if (this == ZeroAbstractValue.ZERO || another == ZeroAbstractValue.ZERO) {
             return ZeroAbstractValue.ZERO;
+        } else if (this == ZeroAbstractValue.MAYBE_ZERO || another == ZeroAbstractValue.MAYBE_ZERO) {
+            return ZeroAbstractValue.MAYBE_ZERO;
         } else {
             return ZeroAbstractValue.NOT_ZERO;
         }
@@ -112,6 +114,7 @@ public enum ZeroAbstractValue {
      * @return the result of the merge.
      */
     public ZeroAbstractValue merge(ZeroAbstractValue another) {
+        //union de conjuntos suponendo bottom = conjunto vacio y MAYBE_ZERO = top
         if (this == ZeroAbstractValue.BOTTOM) {
             return another;
         } else if (another == ZeroAbstractValue.BOTTOM) {

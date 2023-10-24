@@ -1,6 +1,7 @@
 package inge2.dataflow.zeroanalysis;
 
 import java.util.HashMap;
+import java.util.HashSet;
 import java.util.Objects;
 import java.util.Set;
 
@@ -61,7 +62,8 @@ public class ZeroAbstractSet {
      * @return the union of this set with another set.
      */
     public ZeroAbstractSet union(ZeroAbstractSet another) {
-        Set<String> all_variables = this.getDefinedVariables();
+        //calculamos la union de ambos conjuntos de variables y mergeamos los valores abstractos para cada nombre de variable
+        HashSet<String> all_variables = new HashSet<String>(this.getDefinedVariables());
         all_variables.addAll(another.getDefinedVariables());
         ZeroAbstractSet res = new ZeroAbstractSet();
         for (String variable_name: all_variables) {

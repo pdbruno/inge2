@@ -59,8 +59,8 @@ public class ZeroValueVisitor extends AbstractValueVisitor<ZeroAbstractValue> {
      */
     @Override
     public void visitDivExpression(ZeroAbstractValue leftOperand, ZeroAbstractValue rightOperand) {
-        // TODO: IMPLEMENTAR.
-        throw new UnsupportedOperationException();
+        resolvedValue = leftOperand.divideBy(rightOperand);
+        possibleDivisionByZero = rightOperand == ZeroAbstractValue.ZERO || rightOperand == ZeroAbstractValue.MAYBE_ZERO;
     }
 
     /**
@@ -100,8 +100,7 @@ public class ZeroValueVisitor extends AbstractValueVisitor<ZeroAbstractValue> {
      */
     @Override
     public void visitIntegerConstant(int value) {
-        // TODO: IMPLEMENTAR.
-        throw new UnsupportedOperationException();
+        resolvedValue = value == 0 ? ZeroAbstractValue.ZERO : ZeroAbstractValue.NOT_ZERO;
     }
 
     /**
